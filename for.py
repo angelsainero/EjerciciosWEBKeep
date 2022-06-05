@@ -59,4 +59,26 @@ rv={"A":1,"B":2,"C":3,"D":4}
 for item, valor in rv.items():
     print(item,valor)
 
+#------------------------------------------------------------------------------------------------------
+#WHILE
+
+i = 1
+while i <= 3:
+    print(i)
+    i += 1
+print ("programa terminado")
+
+
+
+#Asignar elemento de una lista a valor de otra
+def nota_numerica (letra):
+    letras=['A','B','C','D','E']
+    notas=[1,2,3,4,5]
+    puntero=0
+
+    while letras[puntero] != letra:
+        puntero +=1
+    
+    return notas[puntero]
+
 
