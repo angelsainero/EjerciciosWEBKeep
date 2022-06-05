@@ -9,7 +9,8 @@ def desglosa (nombre):
     for caracter in nombre:
         print (caracter)
 
-desglosa ("angel")
+desglosa ("angel\n")
+
 #-------------------------------------------------------------------------------------------------
 #saca vocales, forma 1 
 def extrae(nombre):
@@ -36,3 +37,26 @@ def multi(numero):
     for n in range (1,11):
         print ("{:>2} x {} = {:>2}".format(n, numero, n*numero))
         
+#---------------------------------------------------------------------------------------------------
+#Diccionarios iteracion
+print("imprimiento item")
+rv={"A":1,"B":2,"C":3,"D":4}
+for item in rv:
+    print(item)
+
+print("imprimiento valor")
+rv={"A":1,"B":2,"C":3,"D":4}
+for item in rv.values():
+    print(item)
+
+print("imprimiento ambos")
+rv={"A":1,"B":2,"C":3,"D":4}
+for item in rv.items():
+    print(item)
+
+print("imprimiento ambos")
+rv={"A":1,"B":2,"C":3,"D":4}
+for item, valor in rv.items():
+    print(item,valor)
+
+
