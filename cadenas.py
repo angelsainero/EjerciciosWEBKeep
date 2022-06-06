@@ -31,3 +31,7 @@ print(message)
 
 #--------------------------------------------------------------------------------------------
 #tabulaciones y espacios en blanco 
+print ("Languajes:\n\tPython\n\tC\n\tJavascript")
+#quitar espacios izq: lstrip() der:rstrip() ambos:strip()
+angel="   Angel sainero"
+print(angel.lstrip())
