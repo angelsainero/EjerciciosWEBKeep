@@ -33,6 +33,36 @@ popbicis=bicis.pop()
 print (bicis)
 print (popbicis)
 
-#borrar elemento por valor
+# borrar elemento por valor
 bicis.remove("orbea")
+
+#mas ejemplos de listas 
+names = ['ron', 'tyler', 'dani']
+msg = f"Hello, {names[0].title()}!"
+print(msg)
+
+
+#ordenar una lista permanentemente
+cars = ['bmw', 'audi', 'toyota', 'subaru']
+print(cars)
+cars.reverse()
+print(cars)
+cars.sort()
+print(cars)
+    # ['bmw', 'audi', 'toyota', 'subaru']
+    # ['subaru', 'toyota', 'audi', 'bmw']
+    # ['audi', 'bmw', 'subaru', 'toyota']
+
+#ordenar lista temporalmente
+cars = ['bmw', 'audi', 'toyota', 'subaru']
+print(cars)
+print(sorted(cars))
+print(cars)
+    # ['bmw', 'audi', 'toyota', 'subaru']
+    # ['audi', 'bmw', 'subaru', 'toyota']
+    # ['bmw', 'audi', 'toyota', 'subaru']
+
+#longitud de una lista
+print(len(cars))
+    #4
 
