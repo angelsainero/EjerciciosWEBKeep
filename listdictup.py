@@ -66,3 +66,21 @@ print(cars)
 print(len(cars))
     #4
 
+#listas con range() intercala de 2 en 2
+even_numbers = list(range(2, 11, 2)) 
+print(even_numbers)
+    # [2, 4, 6, 8, 10]
+
+#min max y suma de los valores de una lista
+lista=list(range(1,11))
+print(lista)
+a=min(lista)
+b=max(lista)
+c=sum(lista)
+print(a)
+print(b)
+print(c)
+    # 1
+    # 10
+    # 55
+
