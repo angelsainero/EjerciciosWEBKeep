@@ -1,8 +1,11 @@
-from contador import creaContador
+from contador import creaContador, Contador
 
-click1 = creaContador()
-click2 = creaContador(5)
+c1 = creaContador()
 
-print(click1())
-print(click2())
+c2 = creaContador(5)
 
+c3 = Contador()
+
+c4 = Contador(5)
+print(c1(), c3.click()) #1
+print(c2(), c4.click()) #6

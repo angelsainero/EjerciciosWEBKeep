@@ -1,35 +1,49 @@
-def creaContador(ini=0):
-    clicks=ini
+def creaContador(ini = 0):
+    def clicks():
+        nonlocal ini
 
-    def click():
-        nonlocal clicks
-        clicks = clicks + 1
-        return clicks
+        ini += 1
+        return ini
     
-    return click
+    return clicks
 
-
-
-'''
-lo ideal sería hacer un contador reutilizable
-
-c1 <-- creutilizable(valor)
-c1 ( meter algún parametro )
-    () --> si no meto nada que haga un click (*1)
-    (consulta) --> si pongo la palabra consulta que devuelva el valor de clicks (*2)
-    (reset, (opcional) ) --> Haga reset y empiece por el parametro opcional (*3)
-
- '''
 
 def creaContadorReutilizable(ini=0):
-    clicks=ini
-    
-    def contador(**kwargs): #parametros clave valor
-        if len(kwargs)==0: #si no has metido nada 
+    clicks = ini
+    def reset(v):
+        nonlocal clicks
+        clicks = v
 
-        pass
+    def consulta():
+        return clicks
+
+    def contador(**kwargs):
+        nonlocal clicks
+
+        if len(kwargs) == 0:
+            clicks += 1
+            return clicks
+
+        if 'reset' in kwargs:
+            valor_inicial = kwargs['reset']
+            reset(valor_inicial)
+            return clicks
+        elif 'consulta' in kwargs:
+            return consulta()
+        else:
+            raise 'Método no permitido'
 
     return contador
 
-#Un prototipo con PF codigo 1 funciona clic 
-minuto 2,34
+
+class Contador():
+    def __init__(self, ini=0):
+        self.clicks = ini
+
+    def click(self):
+        self.clicks += 1
+        return self.clicks
+
+    def reset(self, v=0):
+        self.clicks = v
+        return self.clicks
