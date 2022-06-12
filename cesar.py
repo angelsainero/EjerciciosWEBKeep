@@ -9,7 +9,6 @@ def cesar(caracter, clave):
 print (cesar("A",1)) #TEST1 
 print (cesar("Z",1)) #TEST2 
 
-
 def cifrar (mensaje,clave):
     resultado = ""
     for caracter in mensaje:
@@ -17,11 +16,27 @@ def cifrar (mensaje,clave):
         resultado += nuevo_caracter
     return resultado
 
-print(cifrar("HOLA",3))
-    #KRÑD
+print(cifrar("ABS",-1)) #TEST1 
+    #ZAR
+print(cifrar("ZAR",1)) #TEST2
+    #ABS    
 
-#CREANDO CIFRADO DE FRASE 02:36
+#AHORA EMPEZAMOS CON LAS FUNCIONES DE ORDEN SUPERIOR
+'''
+CrearCifrador(Clave) --> cifra7
+cifra7(m)
+'''
 
+def creaEncriptador(clave):
+    def encriptar(mensaje):
+        res = ""
+        for caracter in mensaje:
+            nuevo_caracter=cesar(caracter, clave) #caracter pertenece a la de dentro y clave a la de fuera
+            res += nuevo_caracter
+        return res
+    return encriptar
 
+_encrypt=creaEncriptador(5)
+_desencrypt=creaEncriptador(-5)
 
-
+print(_encrypt("HOLA"), cifrar("HOLA", 5))
